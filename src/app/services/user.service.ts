@@ -38,4 +38,15 @@ export class UserService {
     })
   }
 
+  getUsers(){
+    return this.httpClient.get(this.url+"/user/get");
+  }
+
+  changeUpdate(data:any){
+    return this.httpClient.post(this.url + "/user/update", data,{
+      headers:new HttpHeaders().set('Content-type',"application/json")
+    })
+  }
+  
+
 }

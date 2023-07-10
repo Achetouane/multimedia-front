@@ -19,6 +19,7 @@ import { NgxUiLoaderConfig, NgxUiLoaderModule,SPINNER } from 'ngx-ui-loader';
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
 import { LoginComponent } from './login/login.component';
 import { TokenInterceptorInterceptor } from './services/token-interceptor.interceptor';
+import {MatToolbarModule} from '@angular/material/toolbar';
 
 const ngxUiLoaderConfig: NgxUiLoaderConfig = {
   text:"Loading...",
@@ -53,6 +54,7 @@ const ngxUiLoaderConfig: NgxUiLoaderConfig = {
     FlexLayoutModule,
     SharedModule,
     HttpClientModule,
+    MatToolbarModule, 
     NgxUiLoaderModule.forRoot(ngxUiLoaderConfig)
     
   ],
